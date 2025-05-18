@@ -79,11 +79,11 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onImageSelected, isLoading })
   };
 
   return (
-    <Card className="w-full shadow-sm">
+    <Card className="w-full shadow-sm border-medical-blue/20">
       <CardContent className="p-6">
         <div
           className={`dropzone flex flex-col items-center justify-center p-8 min-h-[300px] cursor-pointer border-2 border-dashed ${
-            isDragging ? 'border-neutral-400 bg-neutral-50' : 'border-neutral-200'
+            isDragging ? 'border-medical-blue bg-medical-light-blue' : 'border-medical-blue/30'
           }`}
           onDragEnter={handleDragEnter}
           onDragOver={handleDragOver}
@@ -91,18 +91,18 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onImageSelected, isLoading })
           onDrop={handleDrop}
           onClick={() => document.getElementById('file-upload')?.click()}
         >
-          <FileImageIcon className="h-16 w-16 text-neutral-500 mb-4" />
-          <h3 className="text-xl font-medium text-gray-800 mb-2">Upload Breast Scan Image</h3>
-          <p className="text-sm text-neutral-500 mb-4 text-center">
+          <FileImageIcon className="h-16 w-16 text-medical-blue mb-4" />
+          <h3 className="text-xl font-medium text-medical-dark-blue mb-2">Upload Breast Scan Image</h3>
+          <p className="text-sm text-medical-blue mb-4 text-center">
             Drag and drop your scan here, or click to select a file
           </p>
-          <p className="text-xs text-neutral-400 mb-6">
+          <p className="text-xs text-medical-blue/70 mb-6">
             Supported formats: JPEG, PNG, DICOM, TIFF | Max size: 5MB
           </p>
           <Button 
             variant="outline" 
             disabled={isLoading}
-            className="border-neutral-300 text-neutral-700 hover:bg-neutral-100"
+            className="border-medical-blue text-medical-blue hover:bg-medical-light-blue"
           >
             {isLoading ? "Processing..." : "Select Image"}
           </Button>

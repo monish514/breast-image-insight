@@ -4,7 +4,6 @@ import { toast } from "@/components/ui/use-toast";
 import ImageUpload from "@/components/ImageUpload";
 import ResultsPanel from "@/components/ResultsPanel";
 import Header from "@/components/Header";
-import { FileImageIcon } from 'lucide-react';
 
 const Index: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -27,16 +26,16 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-50">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <Header />
       <main className="container mx-auto px-4 pb-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="flex flex-col">
-            <h2 className="text-xl font-semibold mb-4 text-gray-800">Upload Scan</h2>
+            <h2 className="text-xl font-semibold mb-4 text-medical-dark-blue">Upload Scan</h2>
             <ImageUpload onImageSelected={handleImageSelected} isLoading={isLoading} />
           </div>
           <div className="flex flex-col">
-            <h2 className="text-xl font-semibold mb-4 text-gray-800">Scan Preview</h2>
+            <h2 className="text-xl font-semibold mb-4 text-medical-dark-blue">Scan Preview</h2>
             <ResultsPanel imageUrl={imagePreview} isLoading={isLoading} />
           </div>
         </div>
