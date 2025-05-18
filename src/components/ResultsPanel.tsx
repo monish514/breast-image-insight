@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
 import { DetectionResult } from '@/utils/types';
+import { FileImageIcon } from 'lucide-react';
 
 interface ResultsPanelProps {
   imageUrl: string | null;
